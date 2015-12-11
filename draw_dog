@@ -1,0 +1,77 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mytestingprojects;
+
+import java.util.Calendar;
+import javax.microedition.lcdui.Canvas;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.midlet.*;
+
+/**
+ * @author yes
+ */
+public class draw_dog extends MIDlet {
+
+    public void startApp() {
+        Display.getDisplay(this).setCurrent(new drow_dog_Shape());
+    }
+
+    public void pauseApp() {
+    }
+
+    public void destroyApp(boolean unconditional) {
+    }
+}
+
+class drow_dog_Shape extends Canvas {
+
+    protected void paint(Graphics g) {
+        g.setGrayScale(255);
+        int h = getHeight();
+        int w = getWidth();
+        g.fillRect(0, 0, w, h);
+        //Head of Dog
+        g.setColor(00, 00, 00);
+        g.fillArc(80, h - 67, 20, 20, 0, 360);
+        g.setColor(194, 99, 00);
+        g.fillArc(80, h - 66, 20, 20, 0, 360);
+
+
+        //Body of the Dog
+        g.setColor(00, 00, 00);
+        g.fillArc(80, h - 50, 80, 30, 0, 360);
+        g.setColor(194, 66, 00);
+        g.fillArc(80, h - 52, 80, 30, 0, 360);
+
+        //Neck of the dog
+        g.setColor(194, 66, 00);
+        g.fillRect(80, h - 60, 20, 22);
+
+        g.setColor(194, 66, 00);
+        g.fillArc(70, h - 72, 20, 20, 215, 90);
+        g.setColor(194, 66, 00);
+        g.fillArc(90, h - 72, 20, 20, 215, 90);
+
+        //Dog HAND
+        g.setColor(00, 00, 00);
+        g.fillRect(60, h - 30, 40, 5);
+        g.setColor(194, 66, 00);
+        g.fillRect(60, h - 31, 40, 5);
+        g.fillArc(60, h - 31, 10, 10, 0, 360);
+        // Dog TAIL
+        g.setColor(194, 66, 00);
+        g.fillArc(158, h - 40, 5, 5, 0, 360);
+        g.fillArc(160, h - 41, 5, 5, 0, 360);
+        g.fillArc(162, h - 42, 5, 5, 0, 360);
+        g.fillArc(164, h - 42, 5, 5, 0, 360);
+        g.fillArc(166, h - 42, 5, 5, 0, 360);
+        g.fillArc(168, h - 44, 5, 5, 0, 360);
+        g.fillArc(170, h - 46, 5, 5, 0, 360);
+        g.fillArc(172, h - 48, 5, 5, 0, 360);
+        g.fillArc(174, h - 50, 5, 5, 0, 360);
+
+    }
+}
