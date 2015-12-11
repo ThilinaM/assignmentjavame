@@ -1,0 +1,67 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mytestingprojects;
+
+import javax.microedition.lcdui.Canvas;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.midlet.*;
+
+/**
+ * @author yes
+ */
+public class draw_house extends MIDlet {
+
+    public void startApp() {
+        Display.getDisplay(this).setCurrent(new house_draw());
+    }
+    
+    public void pauseApp() {
+    }
+    
+    public void destroyApp(boolean unconditional) {
+    }
+}
+class house_draw extends Canvas{
+
+    protected void paint(Graphics g) {
+       g.setGrayScale(255);
+      int h =getHeight();
+      int w =getWidth();
+     
+      g.fillRect(0,0, w, h);
+      g.setColor(00,0,0);
+       int So =24;
+      g.fillRect(So+100, 170, 107, 70);
+       g.setColor(255,0,0);
+      g.fillTriangle(So+70, 130, So+100, 170, So+210,170);
+      g.fillTriangle( So+70,130, So+170, 130, So+210, 170);
+      //BACK SIDE Of the house
+       g.setColor(0,0,00);
+      g.fillTriangle(So+70, 130, So+100,170, So+ 50,175);
+       g.setColor(0xff,0xcc,66);
+      g.fillTriangle(So+72, 136, So+98,172, So+52,175);
+      g.fillTriangle(So+65, 170,So+ 100,172,So+ 100,240);
+      g.setColor(0,0,00);
+      g.fillTriangle(So+65, 170, So+100,240, So+65,220);
+      //house Front Side
+        g.setColor(0xff,0xcc,66);
+       g.fillRect(So+102, 172, 103, 66);
+       //Add a door 
+       g.setColor(0,0,00);
+      g.fillRect(So+128, 175, 30,63);
+       g.setColor(66,0,00);
+      g.fillRect(So+130, 177, 28,61);
+       //Add Window For the house
+       g.setColor(0,0,00);
+      g.fillRect(So+162, 175, 40,22);
+      g.setColor(66,0,00);
+      g.fillRect(So+164, 177, 38,20);
+      g.setColor(0,0,00);
+        g.fillRect(So+166, 179, 16,16);
+        g.fillRect(So+184, 179, 16,16);
+    }
+
+}
