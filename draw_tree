@@ -1,0 +1,105 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mytestingprojects;
+
+import javax.microedition.lcdui.Canvas;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.midlet.*;
+
+/**
+ * @author yes
+ */
+public class draw_tree extends MIDlet {
+
+    public void startApp() {
+        Display.getDisplay(this).setCurrent(new draw_tree_shape());
+    }
+
+    public void pauseApp() {
+    }
+
+    public void destroyApp(boolean unconditional) {
+    }
+}
+
+class draw_tree_shape extends Canvas {
+
+    protected void paint(Graphics g) {
+        int h = getHeight();
+        int w = getWidth();
+        g.setGrayScale(255);
+        g.fillRect(0, 0, getWidth(), getHeight());
+        //Gahe Mulla
+         g.setColor(00, 00, 00);
+      g.fillArc(10, h - 50, 60, 60, 0, 180);
+         g.setColor(66, 33, 00);
+      g.fillArc(15, h - 45, 50, 50, 0, 180);
+
+//Gahe KADA
+        int x = 0;
+        g.setColor(00, 00, 00);
+        g.fillRoundRect(x + 25, h - 135, 4, 100, 0, 0);
+        g.setColor(66, 33, 00);
+        g.fillRoundRect(x + 27, h - 120, 4, 100, 0, 0);
+        g.setColor(99, 33, 00);//
+        g.fillRoundRect(x + 29, h - 120, 4, 100, 0, 0);
+        g.setColor(99, 66, 00);//
+        g.fillRoundRect(x + 31, h - 120, 4, 100, 0, 0);
+        g.setColor(77, 00, 00);
+        g.fillRoundRect(x + 33, h - 120, 8, 100, 0, 0);
+        g.setColor(77, 00, 00);
+        g.fillRoundRect(x + 40, h - 120, 4, 100, 0, 0);
+        g.setColor(99, 33, 00);
+        g.fillRoundRect(x + 44, h - 120, 4, 100, 0, 0);
+        g.setColor(66, 33, 00);
+        g.fillRoundRect(x + 48, h - 120, 4, 100, 0, 0);
+        g.setColor(00, 00, 00);
+        g.fillRoundRect(x + 52, h - 135, 4, 100, 0, 0);
+        // Gahe Kola
+         g.setColor(00, 255, 00);
+        g.fillArc(x +0, 120, 60, 60, 0, 360);
+         g.setColor(33, 99, 00);
+        g.fillArc(x +20, 110, 60, 60, 270, 270);
+         g.setColor(00, 100, 00);
+        g.fillArc(x +30, 150, 50, 50, 0, 360);
+        g.setColor(00, 190, 00);
+        g.fillArc(x +40, 130, 60, 60, 240, 150);       
+        g.setColor(00, 99,33);
+        g.fillArc(x +26, 156, 60, 60, 270, 90);
+        g.setColor(00, 255, 00);
+        g.fillArc(x +30, 120, 70, 60, 270, 150);
+        g.setColor(33, 99, 33);
+        g.fillArc(x +30, 110, 60, 60, 270, 180);
+         g.setColor(00, 209, 33);
+        g.fillArc(x +10, 110, 60, 60, 0, 360);
+        g.setColor(33, 99, 33);
+        g.fillArc(x +20, 110, 60, 60, 0, 360);
+        g.setColor(33, 99, 33);
+        g.fillArc(x +0, 150, 60, 60, 0, 360);  
+        
+        //Gahe mula
+       
+    
+//        g.fillArc(0, h - 30, 20, 20, 0, 360);
+//        g.fillArc(65, h - 30, 20, 20, 0, 360);
+//        // Add rock to the foundation
+//        g.setColor(00, 33, 00);// dark green colour.
+//        g.fillArc(0, h - 20, 20, 20, 0, 360);
+//        g.fillArc(20, h - 20, 20, 20, 0, 360);
+//        g.fillArc(30, h - 20, 20, 20, 0, 360);
+//        g.fillArc(40, h - 20, 20, 20, 0, 360);
+//        g.fillArc(50, h - 20, 20, 20, 0, 360);
+//
+//        //Other futter colours
+//        g.setColor(33, 33, 00);// dark green colour.
+//        g.fillArc(5, h - 20, 20, 20, 0, 360);
+//        g.fillArc(12, h - 20, 20, 20, 0, 360);
+//        g.fillArc(18, h - 20, 20, 20, 0, 360);
+//        g.fillArc(22, h - 20, 20, 20, 0, 360);
+//        g.fillArc(14, h - 20, 20, 20, 0, 360);
+
+    }
+}
