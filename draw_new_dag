@@ -1,0 +1,82 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mytestingprojects;
+
+import javax.microedition.lcdui.Canvas;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.midlet.*;
+
+/**
+ * @author yes
+ */
+public class draw_new_dag extends MIDlet {
+
+    public void startApp() {
+        Display.getDisplay(this).setCurrent(new draw_new_dag_Dia());
+    }
+
+    public void pauseApp() {
+    }
+
+    public void destroyApp(boolean unconditional) {
+    }
+}
+
+class draw_new_dag_Dia extends Canvas {
+
+    protected void paint(Graphics g) {
+        g.setGrayScale(255);
+        g.setColor(0xff, 0xff, 0xff);
+        int h = getHeight();
+        int w = getWidth();
+        g.fillRect(0, 0, w, h);
+        //Yers of the Dog 
+         g.setColor(99, 33, 00);
+        g.fillTriangle(130, 220,146, 204,137,260);
+         
+         //Mouth Of the Dog 
+           g.setColor(0, 00, 00);
+         g.fillArc(107, 220, 20,20,0,360);
+         g.setColor(0xcc, 66, 00);
+         g.fillArc(105, 220, 6,6,0,360);
+          g.setColor(255, 00, 00);
+          // NecK of the Dog 
+         g.fillRect(126, 238, 16,20);
+         // Tail Of the Dog
+         g.setColor(99, 33, 00);
+         g.fillRoundRect(198, 250, 10, 10, 30, 30);
+         g.fillRoundRect(198, 248, 10, 10, 30, 30);
+         g.fillRoundRect(198, 244, 10, 10, 30, 30);
+         g.fillRoundRect(198, 242, 10, 10, 30, 30);
+         g.fillRoundRect(200, 238, 10, 10, 30, 30);
+         g.fillRoundRect(202, 234, 10, 10, 30, 30);
+        g.setColor(00, 00, 00);
+             
+        g.fillRoundRect(114, 214, 30, 30, 30, 30);
+        g.fillRoundRect(125, 240, 45, 45, 60, 60);
+        g.fillRoundRect(178, 250, 30, 30, 30, 30);
+        g.setColor(99, 33, 00);
+        g.fillRoundRect(116, 216, 28, 28, 30, 30);
+        g.fillRoundRect(127, 242, 45, 43, 60, 60);
+        g.fillRoundRect(180, 252, 28, 28, 30, 30);
+       // g.fillRoundRect(182, 252, 28, 28, 30, 30);
+        g.fillRoundRect(127, 242, 55, 43, 60, 60);
+        g.fillRoundRect(165, 248, 27, 27, 60, 60);
+         //Leg of the dog
+           g.fillTriangle(127,260, 140, 280, 120, 300);
+           //Second Leg of the Dog 
+           
+                      g.setColor(66, 33, 00);  
+         //Leg of Back
+         g.fillTriangle(180,264, 188, 280, 168, 300);
+          g.setColor(99, 33, 00);
+         g.fillTriangle(204,264, 188, 280, 218, 300);
+       
+        
+       
+
+    }
+}
