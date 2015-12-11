@@ -1,0 +1,315 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mytestingprojects;
+
+import javax.microedition.lcdui.Canvas;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.midlet.*;
+
+/**
+ * @author yes
+ */
+public class picture extends MIDlet {
+
+    public void startApp() {
+        Display.getDisplay(this).setCurrent(new drawArt());
+    }
+
+    public void pauseApp() {
+    }
+
+    public void destroyApp(boolean unconditional) {
+    }
+}
+
+class drawArt extends Canvas {
+
+    protected void paint(Graphics g) {
+        //Draw Sky
+        int h = getHeight();
+        int w = getWidth();
+
+        //  g.setGrayScale(255);
+        g.setColor(33, 33, 100);
+        g.fillRect(0, 0, w, h / 2);
+        g.setColor(66, 66, 66);
+        g.fillRect(0, 0 + h / 2, w, h / 2);
+        // Draw Birds 
+        g.setColor(00, 00, 00);
+        g.fillArc(20, 20, 20, 20, 0, 360);
+        g.fillArc(40, 20, 20, 20, 0, 360);
+        g.setColor(33, 33, 100);
+        g.fillArc(20, 22, 20, 20, 0, 360);
+        g.fillArc(40, 22, 20, 20, 0, 360);
+        //Second birds
+        g.setColor(00, 00, 00);
+        g.fillArc(80, 40, 20, 20, 0, 360);
+        g.fillArc(100, 40, 20, 20, 0, 360);
+        g.setColor(33, 33, 100);
+        g.fillArc(80, 42, 20, 20, 0, 360);
+        g.fillArc(100, 42, 20, 20, 0, 360);
+        //3 birds
+        g.setColor(00, 00, 00);
+        g.fillArc(120, 40, 20, 20, 0, 360);
+        g.fillArc(140, 40, 20, 20, 0, 360);
+        g.setColor(33, 33, 100);
+        g.fillArc(120, 42, 20, 20, 0, 360);
+        g.fillArc(140, 42, 20, 20, 0, 360);
+        //4 birds
+        g.setColor(00, 00, 00);
+        g.fillArc(170, 80, 20, 20, 0, 360);
+        g.fillArc(190, 80, 20, 20, 0, 360);
+        g.setColor(33, 33, 100);
+        g.fillArc(170, 82, 20, 20, 0, 360);
+        g.fillArc(190, 82, 20, 20, 0, 360);
+
+        //Draw Moon 
+        g.setColor(255, 00, 00);
+        g.fillRoundRect(40, 50, 40, 40, 40, 40);
+        g.setColor(255, 99, 00);
+        g.fillRoundRect(42, 52, 36, 36, 40, 40);
+        g.setColor(255, 255, 00);
+        g.fillRoundRect(44, 54, 32, 32, 40, 40);
+        //Draw Cloud 
+        g.setColor(99, 99, 90);
+        g.fillRoundRect(88, 75, 20, 20, 40, 40);
+        g.fillRoundRect(95, 70, 40, 40, 40, 40);
+        g.fillRoundRect(105, 65, 30, 30, 40, 40);
+        g.fillRoundRect(125, 75, 20, 20, 40, 40);
+        //Drow Cloud 2 
+        //Draw Cloud 
+        g.setColor(109, 99, 90);
+        g.fillRoundRect(118, 75, 20, 20, 40, 40);
+        g.fillRoundRect(125, 70, 40, 40, 40, 40);
+        g.fillRoundRect(135, 65, 30, 30, 40, 40);
+        g.fillRoundRect(155, 75, 20, 20, 40, 40);
+        //Drow Second Clould In the art
+//        g.setColor(255,255,00);
+//      g.fillRoundRect(40, 50,40, 40, 40,40);
+        //Draw Cloud 
+        int cloudhight = 0;
+        g.setColor(99, 99, 90);
+        g.fillRoundRect(48, 50, 20, 20, 40, 40);
+        g.fillRoundRect(55, 45, 40, 40, 40, 40);
+        g.fillRoundRect(65, 40, 30, 30, 40, 40);
+        g.fillRoundRect(85, 50, 20, 20, 40, 40);
+        //Drow Cloud 2 
+        //Draw Cloud 
+        g.setColor(99, 99, 90);
+        g.fillRoundRect(78, 50, 20, 20, 40, 40);
+        g.fillRoundRect(85, 45, 40, 40, 40, 40);
+        g.fillRoundRect(95, 40, 30, 30, 40, 40);
+        g.fillRoundRect(115, 50, 20, 20, 40, 40);
+        // Drow Trees Before the House
+        g.setColor(00, 255, 0);
+        g.fillArc(w - 50, 120, 50, 50, 0, 360);
+        g.setColor(00, 99, 0);
+        g.fillArc(w - 60, 112, 50, 50, 270, 280);
+
+
+
+        //Draw House.....   
+
+        g.setColor(0, 0, 00);
+
+        int So = 24;
+        g.fillRect(So + 100, 170, 107, 70);
+        g.setColor(255, 0, 0);
+        g.fillTriangle(So + 70, 130, So + 100, 170, So + 210, 170);
+        g.fillTriangle(So + 70, 130, So + 170, 130, So + 210, 170);
+        //BACK SIDE Of the house
+        g.setColor(0, 0, 00);
+        g.fillTriangle(So + 70, 130, So + 100, 170, So + 50, 175);
+        g.setColor(0xff, 0xcc, 66);
+        g.fillTriangle(So + 72, 136, So + 98, 172, So + 52, 175);
+        g.fillTriangle(So + 65, 170, So + 100, 172, So + 100, 240);
+        g.setColor(0, 0, 00);
+        g.fillTriangle(So + 65, 170, So + 100, 240, So + 65, 220);
+        //house Front Side
+        g.setColor(0xff, 0xcc, 66);
+        g.fillRect(So + 102, 172, 103, 66);
+        //Add a door 
+        g.setColor(0, 0, 00);
+        g.fillRect(So + 128, 175, 30, 63);
+        g.setColor(66, 0, 00);
+        g.fillRect(So + 130, 177, 28, 61);
+        //Add Window For the house
+        g.setColor(0, 0, 00);
+        g.fillRect(So + 162, 175, 40, 22);
+        g.setColor(66, 0, 00);
+        g.fillRect(So + 164, 177, 38, 20);
+        g.setColor(0, 0, 00);
+        g.fillRect(So + 166, 179, 16, 16);
+        g.fillRect(So + 184, 179, 16, 16);
+        //Draw Tree
+        //Gahe Mulla
+        g.setColor(00, 00, 00);
+        g.fillArc(10, h - 50, 60, 60, 0, 180);
+        g.setColor(66, 33, 00);
+        g.fillArc(15, h - 45, 50, 50, 0, 180);
+
+//Gahe KADA
+        int x = 0;
+        g.setColor(00, 00, 00);
+        g.fillRoundRect(x + 25, h - 135, 4, 100, 0, 0);
+        g.setColor(66, 33, 00);
+        g.fillRoundRect(x + 27, h - 120, 4, 100, 0, 0);
+        g.setColor(99, 33, 00);//
+        g.fillRoundRect(x + 29, h - 120, 4, 100, 0, 0);
+        g.setColor(99, 66, 00);//
+        g.fillRoundRect(x + 31, h - 120, 4, 100, 0, 0);
+        g.setColor(77, 00, 00);
+        g.fillRoundRect(x + 33, h - 120, 8, 100, 0, 0);
+        g.setColor(77, 00, 00);
+        g.fillRoundRect(x + 40, h - 120, 4, 100, 0, 0);
+        g.setColor(99, 33, 00);
+        g.fillRoundRect(x + 44, h - 120, 4, 100, 0, 0);
+        g.setColor(66, 33, 00);
+        g.fillRoundRect(x + 48, h - 120, 4, 100, 0, 0);
+        g.setColor(00, 00, 00);
+        g.fillRoundRect(x + 52, h - 135, 4, 100, 0, 0);
+        // Gahe Kola
+        g.setColor(00, 255, 00);
+        g.fillArc(x + 0, 120, 60, 60, 0, 360);
+        g.setColor(33, 99, 00);
+        g.fillArc(x + 20, 110, 60, 60, 270, 270);
+        g.setColor(00, 100, 00);
+        g.fillArc(x + 30, 150, 50, 50, 0, 360);
+        g.setColor(00, 190, 00);
+        g.fillArc(x + 40, 130, 60, 60, 240, 150);
+        g.setColor(00, 99, 33);
+        g.fillArc(x + 26, 156, 60, 60, 270, 90);
+        g.setColor(00, 255, 00);
+        g.fillArc(x + 30, 120, 70, 60, 270, 150);
+        g.setColor(33, 99, 33);
+        g.fillArc(x + 30, 110, 60, 60, 270, 180);
+        g.setColor(00, 209, 33);
+        g.fillArc(x + 10, 110, 60, 60, 0, 360);
+        g.setColor(33, 99, 33);
+        g.fillArc(x + 20, 110, 60, 60, 0, 360);
+        g.setColor(33, 99, 33);
+        g.fillArc(x + 0, 150, 60, 60, 0, 360);
+//Draw Dog 
+        //Head of Dog
+        g.setColor(00, 00, 00);
+        g.fillArc(80, h - 67, 20, 20, 0, 360);
+        g.setColor(194, 99, 00);
+        g.fillArc(80, h - 66, 20, 20, 0, 360);
+
+
+        //Body of the Dog
+        g.setColor(00, 00, 00);
+        g.fillArc(80, h - 50, 80, 30, 0, 360);
+        g.setColor(194, 66, 00);
+        g.fillArc(80, h - 52, 80, 30, 0, 360);
+
+        //Neck of the dog
+        g.setColor(194, 66, 00);
+        g.fillRect(80, h - 60, 20, 22);
+
+        g.setColor(194, 66, 00);
+        g.fillArc(70, h - 72, 20, 20, 215, 90);
+        g.setColor(194, 66, 00);
+        g.fillArc(90, h - 72, 20, 20, 215, 90);
+
+        //Dog HAND
+        g.setColor(00, 00, 00);
+        g.fillRect(60, h - 30, 40, 5);
+        g.setColor(194, 66, 00);
+        g.fillRect(60, h - 31, 40, 5);
+        g.fillArc(60, h - 31, 10, 10, 0, 360);
+        // Dog TAIL
+        g.setColor(194, 66, 00);
+        g.fillArc(158, h - 40, 5, 5, 0, 360);
+        g.fillArc(160, h - 41, 5, 5, 0, 360);
+        g.fillArc(162, h - 42, 5, 5, 0, 360);
+        g.fillArc(164, h - 42, 5, 5, 0, 360);
+        g.fillArc(166, h - 42, 5, 5, 0, 360);
+        g.fillArc(168, h - 44, 5, 5, 0, 360);
+        g.fillArc(170, h - 46, 5, 5, 0, 360);
+        g.fillArc(172, h - 48, 5, 5, 0, 360);
+        g.fillArc(174, h - 50, 5, 5, 0, 360);
+        // Add a New Dog to the picture
+        //Yers of the Dog 
+        g.setColor(99, 33, 00);
+        g.fillTriangle(130, 220, 146, 204, 137, 260);
+
+        //Mouth Of the Dog 
+        g.setColor(0, 00, 00);
+        g.fillArc(107, 220, 20, 20, 0, 360);
+        g.setColor(0xcc, 66, 00);
+        g.fillArc(105, 220, 6, 6, 0, 360);
+        g.setColor(255, 00, 00);
+        // NecK of the Dog 
+        g.fillRect(126, 238, 16, 20);
+        // Tail Of the Dog
+        g.setColor(99, 33, 00);
+        g.fillRoundRect(198, 250, 10, 10, 30, 30);
+        g.fillRoundRect(198, 248, 10, 10, 30, 30);
+        g.fillRoundRect(198, 244, 10, 10, 30, 30);
+        g.fillRoundRect(198, 242, 10, 10, 30, 30);
+        g.fillRoundRect(200, 238, 10, 10, 30, 30);
+        g.fillRoundRect(202, 234, 10, 10, 30, 30);
+        g.setColor(00, 00, 00);
+
+        g.fillRoundRect(114, 214, 30, 30, 30, 30);
+        g.fillRoundRect(125, 240, 45, 45, 60, 60);
+        g.fillRoundRect(178, 250, 30, 30, 30, 30);
+        g.setColor(99, 33, 00);
+        g.fillRoundRect(116, 216, 28, 28, 30, 30);
+        g.fillRoundRect(127, 242, 45, 43, 60, 60);
+        g.fillRoundRect(180, 252, 28, 28, 30, 30);
+        // g.fillRoundRect(182, 252, 28, 28, 30, 30);
+        g.fillRoundRect(127, 242, 55, 43, 60, 60);
+        g.fillRoundRect(165, 248, 27, 27, 60, 60);
+        //Leg of the dog
+        g.fillTriangle(127, 260, 140, 280, 120, 300);
+        //Second Leg of the Dog 
+
+        g.setColor(66, 33, 00);
+        //Leg of Back
+        g.fillTriangle(180, 264, 188, 280, 168, 300);
+        g.setColor(99, 33, 00);
+        g.fillTriangle(204, 264, 188, 280, 218, 300);
+
+        // Front Trees (Podi gas tika)
+
+        g.setColor(00, 140, 00);
+        g.fillTriangle(0, h - 10, 4, h - 40, 8, h - 10);
+        g.fillTriangle(8, h - 10, 12, h - 40, 16, h - 10);
+        g.fillTriangle(16, h - 10, 20, h - 40, 24, h - 10);
+        g.fillTriangle(24, h - 10, 28, h - 40, 32, h - 10);
+        g.fillTriangle(32, h - 10, 36, h - 40, 40, h - 10);
+        g.fillTriangle(40, h - 10, 44, h - 40, 48, h - 10);
+        g.fillTriangle(48, h - 10, 52, h - 40, 56, h - 10);
+        g.fillTriangle(56, h - 10, 60, h - 40, 64, h - 10);
+        g.setColor(00, 00, 255);
+        int nn = 4;
+        int uu = 00;
+
+        for (int mm = 0; mm < h; mm += 8) {
+            nn += mm;
+            uu += mm;
+            g.fillTriangle(0 + mm, h, nn, h - 20, 8 + uu, h);
+
+        }
+        g.setColor(00, 140, 00);
+        g.fillTriangle(0, h - 10, 4, h - 40, 8, h - 10);
+        g.fillTriangle(8, h - 10, 12, h - 40, 16, h - 10);
+        g.fillTriangle(16, h - 10, 20, h - 40, 24, h - 10);
+        g.fillTriangle(24, h - 10, 28, h - 40, 32, h - 10);
+        g.fillTriangle(32, h - 10, 36, h - 40, 40, h - 10);
+        g.fillTriangle(40, h - 10, 44, h - 40, 48, h - 10);
+        g.fillTriangle(48, h - 10, 52, h - 40, 56, h - 10);
+        g.fillTriangle(56, h - 10, 60, h - 40, 64, h - 10);
+        for (int mm = 312; mm > 0; mm -= 8) {
+            g.fillTriangle(0 + mm, h, nn, h - 20, 8 + uu, h);
+        }
+        for (int mm = 312; mm > 0; mm -= 1) {
+            g.fillTriangle(0 + mm, h, nn, h - 20, 8 + uu, h);
+        }
+    }
+}
